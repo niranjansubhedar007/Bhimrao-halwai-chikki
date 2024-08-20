@@ -29,7 +29,7 @@ const AddToOrderCart = () => {
       const details = await Promise.all(
         cartItems.map(async (item) => {
           const response = await fetch(
-            `http://localhost:5000/api/productData/${item.id}`
+            `https://bhimrao-halwai-chikki.vercel.app/api/productData/${item.id}`
           );
           const data = await response.json();
           return { ...data, size: item.size, quantity: item.quantity || 1 };

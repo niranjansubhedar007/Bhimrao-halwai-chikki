@@ -44,7 +44,7 @@ const ProductCart = () => {
       const fetchProduct = async () => {
         try {
           const response = await fetch(
-            `http://localhost:5000/api/productData/${id}`
+            `https://bhimrao-halwai-chikki.vercel.app/api/productData/${id}`
           );
           const data = await response.json();
           setProduct(data);
