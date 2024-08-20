@@ -18,21 +18,38 @@ const Order = () => {
   const [popupContent, setPopupContent] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
 
+  // useEffect(() => {
+  //   const fetchProducts = async () => {
+  //     try {
+  //       const response = await fetch("https://bhimrao-halwai-chikki-backend.vercel.app/api/productData");
+  //        // Update the endpoint if needed
+  //       const data = await response.json();
+  //       console.log("Fetched products:", data); // Log fetched products
+  //       setProducts(data);
+  //     } catch (error) {
+  //       console.error("Error fetching product data:", error);
+  //     }
+  //   };
+
+  //   fetchProducts();
+  // }, []);
+
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const response = await fetch("https://bhimrao-halwai-chikki-backend.vercel.app/api/productData");
-         // Update the endpoint if needed
         const data = await response.json();
-        console.log("Fetched products:", data); // Log fetched products
+        console.log("Fetched products:", data);
         setProducts(data);
       } catch (error) {
         console.error("Error fetching product data:", error);
       }
     };
-
+  
     fetchProducts();
   }, []);
+  
 
   const handleIconClick = (product, size) => {
     setPopupContent(product);
