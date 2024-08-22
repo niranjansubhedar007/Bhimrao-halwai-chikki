@@ -272,6 +272,7 @@ const AddToOrderCart = () => {
         cartItems.map(async (item) => {
           const response = await fetch(
             `https://bhimrao-halwai-chikki-backend.vercel.app/api/productData/${item.id}`
+            
           );
           const data = await response.json();
           return { ...data, size: item.size, quantity: item.quantity || 1 };
