@@ -21,7 +21,7 @@ const Order = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('https://bhimrao-halwai-chikki.vercel.app/api/productData')
+        const response = await fetch('https://bhimrao-halwai-chikki-backend.vercel.app/api/productData')
 
          // Update the endpoint if needed
         const data = await response.json();
