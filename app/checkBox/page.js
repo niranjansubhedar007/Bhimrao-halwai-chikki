@@ -271,7 +271,7 @@ const CheckBox = () => {
 
                 try {
                     await axios.patch(
-                        `https://bhimrao-halwai-chikki.vercel.app/api/productData/editData/${id}`,
+                        `https://niranjan.rajpawar.xyz/api/productData/editData/${id}`,
                         updateFields
                     );
                 } catch (error) {
@@ -282,7 +282,7 @@ const CheckBox = () => {
 
         // Save form data and product details to the database
         const response = await axios.post(
-            "https://bhimrao-halwai-chikki.vercel.app/api/orderDelivery/addData",
+            "https://niranjan.rajpawar.xyz/api/orderDelivery/addData",
             {
                 ...formData,
                 products: productDetails.map(item => ({

@@ -271,7 +271,7 @@ const AddToOrderCart = () => {
       const details = await Promise.all(
         cartItems.map(async (item) => {
           const response = await fetch(
-            `https://bhimrao-halwai-chikki.vercel.app/api/productData/${item.id}`
+            `https://niranjan.rajpawar.xyz/api/productData/${item.id}`
             
           );
           const data = await response.json();
